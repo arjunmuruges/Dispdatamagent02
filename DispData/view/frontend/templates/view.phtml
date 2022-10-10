@@ -1,0 +1,13 @@
+<?php ?>
+<?php $articleCollection = $block->getCollection(); ?>
+<?php if (count($articleCollection)) { ?>
+      <h2><?= $block->escapeHtml(__('dispData Table')) ?></h2>
+      <?php foreach($articleCollection as $post): ?>
+           <h3><?= $block->escapeHtml(__('Article - ')) ?>
+               <?php echo $post->getId();?> 
+           </h3> 
+          
+           <p><?php echo $post->getName(); ?></p> 
+           <p><?php echo $post->getCustomerId(); ?></p> 
+     <?php endforeach; ?> 
+<?php } ?> 
